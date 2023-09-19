@@ -1,0 +1,1157 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+ }
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+ }
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+ }
+h3 {
+    font-size: 30px;
+    line-height: 40px;
+    color: black;
+ }
+h4 {
+    font-size: 20px;
+    color: black;
+ }
+h5 {
+    font-size: 16px;
+    color: black;
+ }
+h6 {
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+ }
+p{
+    font-size: 16px;
+    color: rgb(65, 65, 65);
+    margin: 15px 0 20px;
+ }
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+   margin: 40px 0;
+}
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+button.white{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 20px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.2s;
+}
+body{
+    width: 100%;
+}
+
+
+
+/* for the header bar */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: #f9f8f2;
+    box-shadow: 0 5PX 15PX rgba(0, 0, 0,0.06);
+    z-index: 999;
+    /* to be sticky */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+/* buttons (h)*/
+#nevbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* (separates) */
+#nevbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+/* text */
+#nevbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3ms ease;
+}
+/* change the color when hovered over by the mouse cursor */
+#nevbar li a:hover ,
+#nevbar li a.active {
+    color: rgb(105, 251, 202);
+}
+/* underline */
+#nevbar li a.active::after ,
+#nevbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:  rgb(105, 251, 202);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* home page */
+#hero{
+    background-image: url(img/home_2.3.png);
+    height: 800px;
+    width: 100%;
+    background-size: cover;
+    background-position: top 10% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+}
+#hero h4 {
+    padding-bottom: 15px;
+}
+#hero h1{
+    color: rgb(34, 168, 139);
+}
+#hero button{
+    background-image: url(img/button.png);
+    background-color: transparent;
+    color: rgb(34, 168, 139);
+    border: 0;
+    padding: 17px 80px 17px 65px;
+    background-repeat:no-repeat ;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+/* features part */
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;    /* .. */
+}
+
+
+
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0,0.03);
+    border: 1px solid  #d5d1b8;
+    border-radius: 4px;
+    margin: 15px 0;
+
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 60px #dbbfdb;
+}
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px;
+    line-height: 1;
+    border-radius: 4px;
+    color: rgb(29, 113, 95);
+    background-color: #edf3e3;
+}
+/* background colors except first feature */
+/* Online Order */
+#feature .fe-box:nth-child(2) h6{
+    background-color: #a7e0e6;
+}
+/* Saving Money */
+#feature .fe-box:nth-child(3) h6{
+    background-color: #a7e6d9;
+}
+/* Promotions */
+#feature .fe-box:nth-child(4) h6{
+    background-color: #e6a7a7;
+}
+/* Happy Sell */
+#feature .fe-box:nth-child(5) h6{
+    background-color: #bbe6a7;
+}
+/* 24/7 Support */
+#feature .fe-box:nth-child(6) h6{
+    background-color: #d2a7e6;
+}
+
+/* products part */
+#product1 .prod-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px ;
+    flex-wrap: wrap;
+}
+
+#product1{
+    text-align: center;
+}
+
+#product1 .prod{
+    width: 23%;
+    min-width: 200px;
+    padding: 10px 10px;
+    border: 1px solid #e3e2d2;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0,0.02);
+    margin: 15px 0;
+    transform: 0.2s ease;
+    position: relative;
+}
+
+#product1 .prod:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0,0.08);
+}
+
+
+#product1 .prod img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product1 .prod .des{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .prod .des span{
+    color:#413f30;
+    font-size: 14px;
+}
+#product1 .prod .des h5{
+    padding-top: 8px;
+    color: #202020;
+    font-size: 15px;
+}
+/* stars */
+#product1 .prod .des i{
+    font-size: 14px;
+    color:#efd159;
+    padding-top: 6px;
+}
+/* price */
+#product1 .prod .des h4{
+    padding-top: 8px;
+    color: #0a9e8d;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+#product1 .prod .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #f3f7e0;
+    /* font-weight: 500; */
+    color: #0a9e8d;
+    border: 1px solid #d7f057;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+/* banner */
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/banner/big_banner.jpg);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4{
+    color:white;
+    /* font-size: 16px; */
+}
+
+#banner h2{
+    color:white;
+    /* font-size: 30px; */
+    padding: 10px 0;
+}
+
+#banner h2 span{
+    color:red;
+    /* font-size: 30px; */
+    padding: 10px 0;
+}
+
+#banner button:hover{
+    background-color: #0a9e8d;
+    color: whitesmoke;
+}
+
+/* small banner */
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(img/banner/small_banner1.png);
+    min-width: 580px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#sm-banner .banner-box2{
+    background-image: url(img/banner/small_banner2.jpg);
+}
+
+
+#sm-banner h4{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#sm-banner h2{
+    color: white;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+#sm-banner span{
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+    background-color: #0a9e8d;
+    border: 1px solid #0a9e8d;
+}
+
+/* banner3 */
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(img/banner/banner3_1.jpg);
+    min-width: 30%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2{
+    background-image: url(img/banner/banner3_2.jpg);
+}
+
+#banner3 .banner-box3{
+    background-image: url(img/banner/banner3_3.jpg);
+}
+
+
+#banner3 h2{
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 23px;                   /*25 */
+}
+
+#banner3 h3{
+    color: rgb(236, 17, 17);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* newsletter */
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(img/banner/newsletter.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color:#440431;
+}
+
+#newsletter h4{
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+#newsletter p{
+    color: rgb(238, 210, 239);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#newsletter p span{
+    color: rgb(254, 229, 1);
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+    background-color:#0a9e8d;
+    white-space: nowrap;
+    color: white;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;   /* because the default is row */
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+
+footer a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #4b4b4b;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #3e3e3e;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+footer .install .row img{
+    border: 1px solid #0a9e8d;
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin: 10px 0px 20px 0;
+}
+
+footer .follow i:hover ,
+footer a:hover{
+    color: #11c7b2;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+/* ---------------------------shop page----------------------- */
+#page-header{
+    background-image: url(img/banner/shoppage_header.png);
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header h2{
+    color:rgb(216, 0, 0);
+}
+
+#page-header p {
+    font-size: 20px;
+    color: black;
+}
+
+/* pagination section */
+#pagination{
+    text-align: center;
+}
+
+#pagination a{
+    /* remove the underline */
+    text-decoration: none;
+    background-color: #0a9e8d;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+
+#pagination a i{
+    font-size: 16px;
+}
+
+/* -----------------single product html page--------------- */
+#proddetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+/* the images */
+#proddetails .single_prod_image{
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group{
+    /* to be in one row */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* for some space between images */
+.small-img-col{
+    cursor: pointer;
+    flex-basis: 24%;
+}
+
+
+/* the image details */
+#proddetails .single_prod_details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+#proddetails .single_prod_details h4{
+    padding: 40px 0 20px 0;
+}
+
+#proddetails .single_prod_details h2{
+    font-size: 26px;
+}
+
+#proddetails .single_prod_details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#proddetails .single_prod_details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* to remove the outline when writing */
+#proddetails .single_prod_details input:focus{
+    outline: none;
+}
+
+
+#proddetails .single_prod_details button{
+    background-color: #0a9e8d;
+    color: white;
+}
+
+#proddetails .single_prod_details span{
+    line-height: 25px;
+}
+
+/* ------------------------blog page----------------- */
+#page-header.blog-header{
+    background-image: url(img/banner/blogpage_header.jpg);
+}
+
+#page-header.blog-header h2,
+#page-header.blog-header p{
+    color: white;
+}
+
+#blog{
+    padding: 150px 150px 0 150px;
+}
+
+#blog .blog-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;              /* h1 */
+    padding-bottom: 90px;
+}
+
+#blog .blog-img{
+    width: 50%;
+    margin-right: 40px;
+}
+
+#blog img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#blog .blog-details{
+    width: 50%;
+}
+
+#blog .blog-details a{
+    text-decoration: none;
+    font-size: 13px;
+    color: black;
+    font-weight: 700;
+    position: relative;          /* line */
+    transition: 0.3s;
+} 
+
+/* to make the line */
+#blog .blog-details a::after{
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    position: absolute;           /* button */
+    top: 6px;
+    right: -60px;
+} 
+
+/* change the button color when stop on it */
+#blog .blog-details a:hover{
+    color:#0a9e8d;
+} 
+/* change the line color when stop on it */
+#blog .blog-details a:hover::after{
+   background-color: #0a9e8d;
+} 
+
+#blog .blog-box h1{
+    position: absolute;               /* blog box */
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color:#e9e4c6;
+    z-index: -1;                      /* any neg num to make it behind the img */
+}
+
+/* ------------------------about page----------------- */
+#page-header.about-header{
+    background-image: url(img/banner/aboutpage_header.png);
+}
+
+#page-header.about-header h2,
+#page-header.about-header p{
+    color: white;
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+#about-head div{
+    padding-left: 40px;
+}
+
+/* about the app */
+#about-app{
+    text-align: center;
+}
+
+#about-app .video{
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#about-app .video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+
+/* --------------------contant page----------------- */
+#contant-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contant-details .details{
+    width: 40%;
+}
+
+#contant-details .details span,
+#form-details form span{                        /*   the form part */
+    font-size: 14px;
+}
+
+#contant-details .details h2,
+#form-details form h2{                          /*   the form part */
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contant-details .details h3{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+#contant-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contant-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+
+}
+
+#contant-details .details li p{
+    margin: 0;
+    font-size: 14px;
+}
+
+/* the map */
+#contant-details .map{
+    width: 55%;
+    height: 400px;
+}
+
+#contant-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* the form */
+
+#form-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #cac67b;
+}
+
+#form-details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form input,
+#form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #cac67b;
+}
+
+#form-details form button{
+    background-color: #0a9e8d;
+    color: white;
+}
+
+#form-details .people div{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+#form-details .people div img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+#form-details .people div p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+
+/* --------------------cart page----------------- */
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img {
+    width: 70px;
+}
+
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(5) input{
+    width:70px ;
+    padding: 10px 5px 10px 15px;
+}
+
+
+#cart table thead{
+    border: 1px solid #cfcd94;
+    border-left: none;
+    border-right: none;
+}
+
+
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+
+#cart table tbody td{
+    font-size: 15px;
+}
+
+
+/* ---------------- */
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#coupon{
+    width: 50%;
+    margin-bottom: 30px;
+
+}
+
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+}
+
+#coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #cfcd94;
+}
+
+#coupon button,
+#subtotal button{
+    background-color: #0a9e8d;
+    color: white;
+    padding: 11px 20px;
+}
+
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #cfcd94;
+    padding: 30px;
+}
+
+#subtotal table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #cfcd94;
+    padding: 10px;
+    font-size: 13px;
+}
+
+
+
+
+/* ---------------------------------login page-------------------------------*/
+#heroLogin{
+    background-image: url(img/home_2.3.png);
+    height: 800px;
+    width: 100%;
+    background-size: cover;
+    background-position: top 10% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+}
+
+
+#heroLogin .form-box{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background:transparent;
+    border: 2px solid #71716d;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+#heroLogin .form-box.register{
+    position:absolute;
+    transform: translateX(400px);
+}
+
+
+
+#heroLogin .form-box .iconclose{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    font-size: 20px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#heroLogin h2{
+    position: absolute;
+    font-size: 25px;
+    color: #000000;
+    margin-top: -420px;
+}
+
+#heroLogin .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #4e4d43;
+    margin: 30px 0;
+}
+
+#heroLogin .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-15px);
+    font-size: 15px;
+    color: #000000;
+    font-weight: 700;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+#heroLogin .input-box input:focus~label,
+#heroLogin .input-box input:valid~label{
+    top:-5px;
+}
+
+
+#heroLogin .input-box input{
+    width: 100%;
+    height: 100%;
+    background:transparent ;
+    border:none;
+    outline: none;
+    font-size: 15px;
+    color: #000000;
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+
+#heroLogin .input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 15px;
+    color: #000000;
+    line-height: 55px;
+}
+
+#heroLogin .remember-forgot{
+    font-size: 13px;
+    color: #000000;
+    font-weight: 500;
+    margin: -15px 0 15px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+#heroLogin .remember-forgot label input{
+    margin-right: 3px;
+    accent-color: black;
+}
+
+#heroLogin .remember-forgot a,
+#heroLogin .login-register p a{
+    color: #262626;
+    text-decoration: none;
+}
+
+#heroLogin .remember-forgot a:hover,
+#heroLogin .login-register p a:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+
+#heroLogin button{
+    width: 100%;
+    height: 45px;
+    background-color: #007567;
+    color: white;
+}
+
+#heroLogin .login-register{
+    font-size: 13px;
+    color: #000000;
+    font-weight: 500;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+#heroLogin .login-register p a{
+    font-weight: 600;
+}
+
+
